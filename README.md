@@ -59,6 +59,12 @@ Where needed:
     BLog.d("Navigation", 7);
 
 
+### Another example
+<img src="Snap273.png"><br>
+This toast explains that initNavImage() was called by dispatch() two times. Where needed the code written was:
+
+    Blog.d("Image", "clicked");
+
 ### Author
 
 [Beppi Menozzi](http://www.beppi.it)
