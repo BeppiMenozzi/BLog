@@ -7,7 +7,7 @@ Additionally, adds the running method name taken from the stack trace.
 ### Setup (Gradle)
 Add **maven { url "https://jitpack.io" }** in project's build.gradle file.
 
-Add **compile 'com.github.BeppiMenozzi:B-Log:1.0.1'** in module's build.gradle file.
+Add **compile 'com.github.BeppiMenozzi:B-Log:0.0.2'** in module's build.gradle file.
 
 ### Usage
 Simply add<br>
