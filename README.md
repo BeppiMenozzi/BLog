@@ -1,8 +1,7 @@
 # B-Log
 
-Helper when debugging.
-With a single code line can show any kind of datatype in the logcat window, replicate that data in a toast and/or in a dialog window.
-Additionally, adds the running method name taken from the stack trace.
+Debug helper.
+With a single line of code it can show any kind of object in the logcat window, replicate that data in a toast and/or in a dialog window. You can see what's the running method name right on the device emulator.
 
 ### Setup (Gradle)
 Add **maven { url "https://jitpack.io" }** in project's build.gradle file.
@@ -14,7 +13,8 @@ Simply add
 
     BLog.d();
     
-to monitor your advancement as if it was a breakpoint. That's it. Put it wherever you like to have a log of what's happening in your code, with more easy-to-read and detailed information than a simple Log.d().
+to monitor your advancement as if it was a breakpoint. That's it
+Put it wherever you like to have a log of what's happening in your code, a toast and optionally a popup with the name of the method, the number of times it was called.
 
 Use
     
@@ -26,7 +26,7 @@ Use
 
     BLog.d(...);
 
-to write anything to Log.d, and/or toast, and/or popup dialog.
+to write anything to Log.d, and/or toast, and/or popup dialog. It accepts nearly any combination of objects and even arrays, so that you don't have to bother with .toString() and loops.
 
 You can also use
 
