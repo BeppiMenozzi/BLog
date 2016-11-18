@@ -158,7 +158,7 @@ public class BLog {
         }
         priv_show(s, 1);
     }
-    public static void d(Object... o) {
+/*    public static void d(Object... o) {
         String s = "";
         for (int w=0; w<o.length; w++) {
             if (w>0) s += ", ";
@@ -166,6 +166,7 @@ public class BLog {
         }
         priv_show(s, 1);
     }
+    */
     public static void d(String title, int... n) {
         String s = "";
         for (int w=0; w<n.length; w++) {
