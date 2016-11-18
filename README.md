@@ -47,6 +47,17 @@ This popup displays
 * a user string
 * a user number.<br>
 The same is shown in the logcat window and, optionally, as toast.
+<br>
+The code to display this popup was:
+
+At the beginning of the Activity:
+
+    BLog.init(this);
+    
+Where needed:
+
+    BLog.d("Navigation", 7);
+
 
 ### Author
 
