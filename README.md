@@ -14,13 +14,13 @@ Simply add
 
     BLog.d();
     
-to monitor your advancement as if it was a breakpoint.
+to monitor your advancement as if it was a breakpoint. That's it. Put it wherever you like to have a log of what's happening in your code, with more easy-to-read and detailed information than a simple Log.d().
 
 Use
     
     BLog.init();
     
-to configure it and pass the Context to show toasts and popups in a very easy and fast way.
+to (optionally) configure it and pass the Context to show toasts and popups in a very easy and fast way.
 
 Use
 
@@ -39,8 +39,13 @@ or
 to quickly debug.
 
 ### Example
-<img src="Snap270.png">
-Popup displays a tag, the method in which it was called, a serial number (first time it was called), a string and a number.
+<img src="Snap270.png"><br>
+This popup displays
+* a tag
+* the method name in which it was called
+* a serial number (it means that it's the first time it was called)
+* a user string
+* a user number.<br>
 The same is shown in the logcat window and, optionally, as toast.
 
 ### Author
