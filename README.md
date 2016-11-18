@@ -10,23 +10,38 @@ Add **maven { url "https://jitpack.io" }** in project's build.gradle file.
 Add **compile 'com.github.BeppiMenozzi:B-Log:0.0.2'** in module's build.gradle file.
 
 ### Usage
-Simply add<br>
+Simply add
 
     BLog.d();
     
-<br> to monitor your advancement as if it was a breakpoint.
+to monitor your advancement as if it was a breakpoint.
 
-Use <br>
+Use
     
     BLog.init();
     
-<br> to configure it and pass the Context to show toasts and popups in a very easy and fast way.
+to configure it and pass the Context to show toasts and popups in a very easy and fast way.
 
-Use <br>
+Use
 
     BLog.d(...);
 
-<br> to write anything to Log.d, and/or toast, and/or popup dialog.
+to write anything to Log.d, and/or toast, and/or popup dialog.
+
+You can also use
+
+    BLog.toastOnly(...);
+    
+or
+
+    BLog.popupOnly(...);
+    
+to quickly debug.
+
+### Example
+<img src="Snap270.png">
+Popup displays a tag, the method in which it was called, a serial number (first time it was called), a string and a number.
+The same is shown in the logcat window and, optionally, as toast.
 
 ### Author
 
