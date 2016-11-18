@@ -63,7 +63,7 @@ Where needed:
 <img src="Snap273.png"><br>
 This toast explains that initNavImage() was called by dispatch() two times. Where needed the code written was:
 
-    Blog.d("Image", "clicked");
+    BLog.d("Image", "clicked");
 
 ### Author
 
