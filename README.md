@@ -6,7 +6,7 @@ With a single line of code it can show any kind of object in the logcat window, 
 ### Setup (Gradle)
 Add **maven { url "https://jitpack.io" }** in project's build.gradle file.
 
-Add **compile 'com.github.BeppiMenozzi:B-Log:0.0.3'** in module's build.gradle file.
+Add **compile 'com.github.BeppiMenozzi:BLog:0.0.3'** in module's build.gradle file.
 
 ### Usage
 Simply add
