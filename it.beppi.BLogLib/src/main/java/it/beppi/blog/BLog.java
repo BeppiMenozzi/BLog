@@ -55,6 +55,9 @@ public class BLog {
     private static void priv_show(String message, int depth) {
         priv_show(message, depth+1, LOG_ON, TOAST_ON, POPUP_ON);
     }
+    private static void priv_show(String title, String message, int depth, boolean log, boolean toast, boolean popup) {
+        priv_show(title + ": " + message, depth+1, log, toast, popup);
+    }
     private static void priv_show(String title, String message, int depth) {
         priv_show(title + ": " + message, depth+1);
     }
@@ -158,7 +161,16 @@ public class BLog {
         }
         priv_show(s, 1);
     }
-/*    public static void d(Object... o) {
+    public static void d(CharSequence... cs) {
+        String s = "";
+        for (int w=0; w<cs.length; w++) {
+            if (w>0) s += ", ";
+            s += cs[w].toString();
+        }
+        priv_show(s, 1);
+    }
+
+    /*    public static void d(Object... o) {
         String s = "";
         for (int w=0; w<o.length; w++) {
             if (w>0) s += ", ";
@@ -199,6 +211,14 @@ public class BLog {
         }
         priv_show(title, s, 1);
     }
+    public static void d(String title, CharSequence... cs) {
+        String s = "";
+        for (int w=0; w<cs.length; w++) {
+            if (w>0) s += ", ";
+            s += cs[w].toString();
+        }
+        priv_show(title, s, 1);
+    }
 
     public static void toastOnly(String message) { priv_show(message, 1, false, true, false);}
     public static void toastOnly() { priv_show("", 1, false, true, false); }
@@ -234,6 +254,14 @@ public class BLog {
         }
         priv_show(s, 1, false, true, false);
     }
+    public static void toastOnly(CharSequence... cs) {
+        String s = "";
+        for (int w=0; w<cs.length; w++) {
+            if (w>0) s += ", ";
+            s += cs[w].toString();
+        }
+        priv_show(s, 1, false, true, false);
+    }
     public static void toastOnly(List<Object> al) {
         String s = "";
         for (int w=0; w<al.size(); w++) {
@@ -242,7 +270,7 @@ public class BLog {
         }
         priv_show(s, 1, false, true, false);
     }
-    public static void toastOnly(Object... o) {
+/*    public static void toastOnly(Object... o) {
         String s = "";
         for (int w=0; w<o.length; w++) {
             if (w>0) s += ", ";
@@ -250,13 +278,14 @@ public class BLog {
         }
         priv_show(s, 1, false, true, false);
     }
+    */
     public static void toastOnly(String title, int... n) {
         String s = "";
         for (int w=0; w<n.length; w++) {
             if (w>0) s += ", ";
             s += Integer.toString(n[w]);
         }
-        priv_show(title, s, 1);
+        priv_show(title, s, 1, false, true, false);
     }
     public static void toastOnly(String title, float... f) {
         String s = "";
@@ -264,7 +293,7 @@ public class BLog {
             if (w>0) s += ", ";
             s += Float.toString(f[w]);
         }
-        priv_show(title, s, 1);
+        priv_show(title, s, 1, false, true, false);
     }
     public static void toastOnly(String title, Boolean... b) {
         String s = "";
@@ -272,7 +301,7 @@ public class BLog {
             if (w>0) s += ", ";
             s += Boolean.toString(b[w]);
         }
-        priv_show(title, s, 1);
+        priv_show(title, s, 1, false, true, false);
     }
     public static void toastOnly(String title, ArrayList<Object> al) {
         String s = "";
@@ -280,7 +309,15 @@ public class BLog {
             if (w>0) s += ", ";
             s += al.get(w).toString();
         }
-        priv_show(title, s, 1);
+        priv_show(title, s, 1, false, true, false);
+    }
+    public static void toastOnly(String title, CharSequence... cs) {
+        String s = "";
+        for (int w=0; w<cs.length; w++) {
+            if (w>0) s += ", ";
+            s += cs[w].toString();
+        }
+        priv_show(title, s, 1, false, true, false);
     }
 
     public static void popupOnly(String message) { priv_show(message, 1, false, true, false);}
@@ -325,7 +362,16 @@ public class BLog {
         }
         priv_show(s, 1, false, false, true);
     }
-    public static void popupOnly(Object... o) {
+    public static void popupOnly(CharSequence... cs) {
+        String s = "";
+        for (int w=0; w<cs.length; w++) {
+            if (w>0) s += ", ";
+            s += cs[w].toString();
+        }
+        priv_show(s, 1, false, false, true);
+    }
+
+    /*    public static void popupOnly(Object... o) {
         String s = "";
         for (int w=0; w<o.length; w++) {
             if (w>0) s += ", ";
@@ -333,13 +379,14 @@ public class BLog {
         }
         priv_show(s, 1, false, false, true);
     }
+    */
     public static void popupOnly(String title, int... n) {
         String s = "";
         for (int w=0; w<n.length; w++) {
             if (w>0) s += ", ";
             s += Integer.toString(n[w]);
         }
-        priv_show(title, s, 1);
+        priv_show(title, s, 1, false, false, true);
     }
     public static void popupOnly(String title, float... f) {
         String s = "";
@@ -347,7 +394,7 @@ public class BLog {
             if (w>0) s += ", ";
             s += Float.toString(f[w]);
         }
-        priv_show(title, s, 1);
+        priv_show(title, s, 1, false, false, true);
     }
     public static void popupOnly(String title, Boolean... b) {
         String s = "";
@@ -355,7 +402,7 @@ public class BLog {
             if (w>0) s += ", ";
             s += Boolean.toString(b[w]);
         }
-        priv_show(title, s, 1);
+        priv_show(title, s, 1, false, false, true);
     }
     public static void popupOnly(String title, ArrayList<Object> al) {
         String s = "";
@@ -363,6 +410,14 @@ public class BLog {
             if (w>0) s += ", ";
             s += al.get(w).toString();
         }
-        priv_show(title, s, 1);
+        priv_show(title, s, 1, false, false, true);
+    }
+    public static void popupOnly(String title, CharSequence... cs) {
+        String s = "";
+        for (int w=0; w<cs.length; w++) {
+            if (w>0) s += ", ";
+            s += cs[w].toString();
+        }
+        priv_show(title, s, 1, false, false, true);
     }
 }
